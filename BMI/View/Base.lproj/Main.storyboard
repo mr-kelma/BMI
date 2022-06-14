@@ -97,6 +97,7 @@
                                             <constraint firstAttribute="height" constant="60" id="DZY-Hn-gey"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
                                         <state key="normal" title="РАССЧИТАТЬ">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -127,11 +128,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calculateButton" destination="94S-Pv-kSY" id="8g6-b6-moi"/>
                         <outlet property="heightLabel" destination="xBT-mY-FBL" id="Gw4-GQ-iVf"/>
                         <outlet property="heightSlider" destination="Su9-YX-9Lf" id="OYo-WX-fgn"/>
                         <outlet property="weightLabel" destination="gkB-kv-8Bu" id="a0e-Uu-UhW"/>
                         <outlet property="weightSlider" destination="vMF-Ud-Q2d" id="fBV-pi-IvI"/>
-                        <segue destination="HNt-Cu-h99" kind="presentation" identifier="goToResult" modalPresentationStyle="automatic" id="y86-GA-NIP"/>
+                        <segue destination="HNt-Cu-h99" kind="presentation" identifier="goToResult" id="D88-Nw-L6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOt-Q0-NwY" sceneMemberID="firstResponder"/>
@@ -195,33 +197,34 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="recalculateButton:" destination="HNt-Cu-h99" eventType="touchUpInside" id="Z8E-72-wl7"/>
+                                    <action selector="recalculatePressed:" destination="HNt-Cu-h99" eventType="touchUpInside" id="Rwj-WR-AWh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LZk-9N-Tih"/>
                         <color key="backgroundColor" red="0.58431372550000005" green="0.82310068609999998" blue="0.42037421460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WIz-gh-KYZ" firstAttribute="bottom" secondItem="LZk-9N-Tih" secondAttribute="bottom" id="GGn-k1-h2l"/>
                             <constraint firstAttribute="trailing" secondItem="aSg-at-mtM" secondAttribute="trailing" id="KC1-3X-6SM"/>
                             <constraint firstItem="aSg-at-mtM" firstAttribute="top" secondItem="Xhi-94-2yY" secondAttribute="top" id="KGN-QY-lV2"/>
                             <constraint firstItem="vZu-Wt-S3R" firstAttribute="centerX" secondItem="Xhi-94-2yY" secondAttribute="centerX" id="OB6-Ic-zaG"/>
+                            <constraint firstItem="WIz-gh-KYZ" firstAttribute="leading" secondItem="LZk-9N-Tih" secondAttribute="leading" constant="20" id="TIf-Tf-WDE"/>
                             <constraint firstItem="vZu-Wt-S3R" firstAttribute="centerY" secondItem="Xhi-94-2yY" secondAttribute="centerY" id="TY9-fz-zye"/>
-                            <constraint firstItem="WIz-gh-KYZ" firstAttribute="leading" secondItem="Xhi-94-2yY" secondAttribute="leadingMargin" id="Vlb-vu-TQ7"/>
-                            <constraint firstItem="WIz-gh-KYZ" firstAttribute="trailing" secondItem="Xhi-94-2yY" secondAttribute="trailingMargin" id="VmX-2T-iJe"/>
+                            <constraint firstItem="LZk-9N-Tih" firstAttribute="trailing" secondItem="WIz-gh-KYZ" secondAttribute="trailing" constant="20" id="bWw-lh-u8W"/>
                             <constraint firstAttribute="bottom" secondItem="aSg-at-mtM" secondAttribute="bottom" id="hYk-s9-WlH"/>
+                            <constraint firstItem="LZk-9N-Tih" firstAttribute="bottom" secondItem="WIz-gh-KYZ" secondAttribute="bottom" id="kU5-hj-5ci"/>
                             <constraint firstItem="aSg-at-mtM" firstAttribute="leading" secondItem="Xhi-94-2yY" secondAttribute="leading" id="tTy-0d-cZj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qJ8-FE-cIY"/>
                     <connections>
-                        <outlet property="adviceLabel" destination="Gyh-N0-QH6" id="KaS-Fx-OpA"/>
-                        <outlet property="bmiLabel" destination="CF9-qc-R8M" id="qu1-SR-jin"/>
+                        <outlet property="adviceLabel" destination="Gyh-N0-QH6" id="hTk-ph-hlb"/>
+                        <outlet property="bmiLabel" destination="CF9-qc-R8M" id="G4Z-Nt-qFL"/>
+                        <outlet property="recalculateButton" destination="WIz-gh-KYZ" id="bnm-Us-4cG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvr-3C-8Qs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="138"/>
+            <point key="canvasLocation" x="915.94202898550736" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
